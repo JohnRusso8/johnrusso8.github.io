@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms of Service - Barchive Social</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Additional styling for terms page */
+        .terms-section {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .effective-date {
+            font-style: italic;
+            color: #888;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Advertise on Barchive</h1>
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="assets/advertise.png" alt="Screenshot of banner ad" width="400" />
+        </div>
+        <section class="terms-section"
+            style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: Arial, sans-serif;">
+            <h2 style="font-size: 28px; margin-bottom: 20px;">How it Works</h2>
+            <p style="font-size: 16px; line-height: 1.6;">
+                Promote your bar, restaurant, or venue directly to nearby users on Barchive.
+                Ads start at <strong>$50</strong> and scale based on two factors you choose:
+            </p>
+            <ul style="font-size: 16px; line-height: 1.6; margin: 20px 0 20px 20px;">
+                <li><strong>Radius</strong>: how close someone needs to be to your location to see the ad</li>
+                <li><strong>Duration</strong>: how long the ad runs</li>
+            </ul>
+            <p style="font-size: 16px; line-height: 1.6;">
+                At the end of your campaign, you’ll receive a report showing how many people clicked your ad.
+                When someone taps it, they’re taken straight to your place page in the app—where they can view posts,
+                ratings, and more.
+            </p>
+            <p style="font-size: 16px; margin-top: 30px;">
+                Contact us below.
+            </p>
+        </section>
+        <section class="business-ad-form">
+            <h3>Business Advertisement</h3>
+            <p class="business-subtitle">Reach your audience by submitting your business details below.</p>
+        </section>
+
+        <form action="https://formspree.io/f/xjkryean" method="POST">
+            <label>
+                Your Email:
+                <input type="email" name="email" required />
+            </label>
+            <label>
+                Business Name:
+                <input type="text" name="business" required />
+            </label>
+            <label>
+                Your Message:
+                <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+
+        <a href="index.html">← Back to Home</a>
+    </div>
+</body>
+
+</html>
