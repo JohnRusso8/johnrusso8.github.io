@@ -179,11 +179,11 @@ button:hover {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .top-section {
     flex-direction: column;
   }
-}
+} */
 
 .android-placeholder {
   width: 150px;
