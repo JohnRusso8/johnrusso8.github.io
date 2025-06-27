@@ -161,17 +161,18 @@ button:hover {
 
 .top-section {
   display: flex;
-  justify-content: center; /* center group of 3 items */
+  justify-content: center; /* centers the row */
   align-items: center;
-  flex-wrap: wrap;
+  gap: 40px; /* spacing between items */
   padding: 20px;
-  gap: 20px;
+  flex-wrap: wrap;
 }
 
+/* Fixed width for all children to balance layout */
+.android-placeholder,
 .logo-container,
-.qr-container,
-.android-placeholder {
-  width: 150px; /* consistent fixed width */
+.qr-container {
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
