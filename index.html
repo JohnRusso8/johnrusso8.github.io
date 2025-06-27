@@ -10,12 +10,14 @@
 
 <body>
   <div class="container">
-<div style="display: flex; justify-content: center; align-items: center; position: relative; padding: 10px;">
+<div style="width: 100%; position: relative; padding: 20px;">
   <!-- Centered logo -->
-  <img src="logo.png" alt="Barchive Social Logo" width="150" style="z-index: 1;" />
+  <div style="display: flex; justify-content: center;">
+    <img src="logo.png" alt="Barchive Social Logo" width="150" />
+  </div>
 
-  <!-- QR code to the right -->
-  <div style="position: absolute; right: 40px; display: flex; flex-direction: column; align-items: center;">
+  <!-- QR code to the right inside the same container -->
+  <div style="position: absolute; top: 20px; right: 40px; display: flex; flex-direction: column; align-items: center;">
     <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank">
       <img src="assets/ios-qr-code.png" alt="QR Code to App Store" width="150" />
     </a>
