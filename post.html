@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open in Barchive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const postId = params.get('id');
+
+      const schemeUrl = `barchive://post?id=${postId}`;
+      const appStoreUrl = "https://apps.apple.com/app/id6742911751";
+      const playStoreUrl = "https://play.google.com/store/apps/details?id=com.yourapp.package";
+
+      const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+      const isAndroid = /Android/.test(navigator.userAgent);
+
+      setTimeout(() => {
+        if (isIOS) {
+          window.location.href = appStoreUrl;
+        } else if (isAndroid) {
+          window.location.href = playStoreUrl;
+        }
+      }, 1500);
+
+      window.location.href = schemeUrl;
+    </script>
+  </head>
+  <body>
+    <p>Opening the Barchive app...</p>
+  </body>
+</html>
