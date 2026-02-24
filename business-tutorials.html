@@ -1,0 +1,217 @@
+<!-- business-tutorials.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Tutorials - Barchive Social</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page-specific (keeps your existing site look) */
+    .page-subtitle {
+      text-align: center;
+      color: #555;
+      line-height: 1.6;
+      margin: 0.75rem 0 1.25rem;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1rem;
+      margin: 1.25rem auto;
+      max-width: 800px;
+    }
+
+    .callouts {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.75rem 0 0;
+    }
+
+    .callouts li {
+      margin-bottom: 0.6rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .callouts li::before {
+      content: "✔️ ";
+      margin-right: 0.35rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+    }
+
+    .video-title {
+      margin: 0 0 0.4rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #2c3e50;
+      text-align: left;
+    }
+
+    .video-desc {
+      margin: 0 0 0.9rem;
+      color: #666;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .yt-embed {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      background: #000;
+      display: block;
+    }
+
+    .video-actions {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      background-color: #007BFF;
+    }
+
+    .btn.secondary {
+      background-color: #50e3c2;
+      color: #0b2b26;
+    }
+
+    .btn:active {
+      opacity: 0.92;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.25rem;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+      }
+      .yt-embed {
+        max-height: 760px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Business Account Tutorials</h1>
+    <p class="page-subtitle">
+      Everything you need to get set up as a verified business on Barchive — and start using the business tools.
+    </p>
+
+    <div class="info-card">
+      <h2 style="margin-top:0; text-align:center;">What you can do with a Business Account</h2>
+      <ul class="callouts">
+        <li>Claim your venue and show you’re the official business</li>
+        <li>Verify ownership so customers can trust your profile</li>
+        <li>Unlock business features like posting as the business and managing your venue presence</li>
+        <li>Keep your personal account separate while still promoting your spot</li>
+      </ul>
+    </div>
+
+    <div class="video-grid">
+      <!-- Video 1 -->
+      <div class="video-card">
+        <p class="video-title">1) Create + Verify a Business Account</p>
+        <p class="video-desc">
+          Step-by-step walkthrough for creating your business profile and completing verification so your place is marked
+          as official.
+        </p>
+
+        <!-- YouTube Shorts embed via /embed/VIDEO_ID -->
+        <iframe class="yt-embed"
+          src="https://www.youtube.com/embed/WZRqEfDl89s"
+          title="Business account creation and verification"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+        <div class="video-actions">
+          <a class="btn" href="https://www.youtube.com/shorts/WZRqEfDl89s" target="_blank" rel="noopener noreferrer">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card">
+        <p class="video-title">2) Business Secondary Account Feature</p>
+        <p class="video-desc">
+          Learn how the secondary business account works, when to use it, and how it helps you keep business + personal
+          separate.
+        </p>
+
+        <iframe class="yt-embed"
+          src="https://www.youtube.com/embed/LWn2s7p6Da4"
+          title="Business secondary account feature"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+        <div class="video-actions">
+          <a class="btn" href="https://www.youtube.com/shorts/LWn2s7p6Da4" target="_blank" rel="noopener noreferrer">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h2 style="margin-top:0; text-align:center;">Need help?</h2>
+      <p style="color:#555; line-height:1.6; margin:0; text-align:center;">
+        If your venue isn’t showing correctly, verification didn’t go through, or you have questions about business tools,
+        reach out and we’ll help you get set up.
+      </p>
+      <div class="video-actions" style="justify-content:center; margin-top: 0.9rem;">
+        <a class="btn secondary" href="mailto:john@barchivesocial.com">Email Support</a>
+        <a class="btn secondary" href="tel:+16094641927">Call Support</a>
+      </div>
+    </div>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+
+    <footer>
+      <a href="terms.html">Terms of Service</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="safety.html">Child Safety Policy</a>
+    </footer>
+  </div>
+</body>
+
+</html>
