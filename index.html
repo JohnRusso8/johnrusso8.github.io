@@ -1,323 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Barchive Social</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #0f1115 0%, #171a21 100%);
-      color: #ffffff;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 18px 40px;
-    }
-
-    .hero {
-      text-align: center;
-      padding-top: 10px;
-      margin-bottom: 28px;
-    }
-
-    .logo-container img {
-      width: 180px;
-      max-width: 70vw;
-      height: auto;
-      display: block;
-      margin: 0 auto 16px;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      margin: 0 0 10px;
-      line-height: 1.15;
-    }
-
-    .hero p {
-      margin: 0 auto;
-      max-width: 680px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #d5d9e2;
-    }
-
-    .desktop-downloads {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 36px;
-      margin: 30px 0 12px;
-      flex-wrap: wrap;
-    }
-
-    .qr-container {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      padding: 18px 16px 14px;
-      text-align: center;
-      min-width: 190px;
-      backdrop-filter: blur(8px);
-    }
-
-    .qr-container a {
-      display: block;
-      text-decoration: none;
-    }
-
-    .qr-container img:first-child {
-      width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
-      border-radius: 10px;
-      background: #fff;
-      padding: 6px;
-    }
-
-    .qr-container img:last-child {
-      width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .mobile-downloads {
-      display: none;
-      margin-top: 22px;
-    }
-
-    .store-badges {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .store-badges a {
-      display: inline-block;
-      transition: transform 0.2s ease;
-    }
-
-    .store-badges a:hover {
-      transform: translateY(-2px);
-    }
-
-    .store-badges img {
-      width: 165px;
-      max-width: 42vw;
-      height: auto;
-      display: block;
-    }
-
-    .video-wrapper {
-      margin: 34px auto 28px;
-      max-width: 760px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
-      background: #000;
-    }
-
-    .video-wrapper video {
-      width: 100%;
-      display: block;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin: 22px 0 14px;
-    }
-
-    .about,
-    .tagline,
-    .business-subtitle {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto 18px;
-      line-height: 1.7;
-      color: #d5d9e2;
-    }
-
-    .features {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      padding-left: 20px;
-      line-height: 1.8;
-      color: #ffffff;
-    }
-
-    .features li {
-      margin-bottom: 8px;
-    }
-
-    .business-ad-form {
-      text-align: center;
-      margin: 28px auto;
-      padding: 24px 18px;
-      max-width: 760px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-    }
-
-    .business-ad-form h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-    }
-
-    .button-link {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 22px;
-      background-color: #007BFF;
-      color: white;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    .image-wrapper {
-      max-width: 760px;
-      margin: 26px auto;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
-    }
-
-    .image-wrapper img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 34px;
-      font-size: 0.95rem;
-      color: #c2c8d3;
-      line-height: 1.8;
-    }
-
-    footer a {
-      color: #cfe2ff;
-      text-decoration: none;
-      margin: 0 4px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px 14px 34px;
-      }
-
-      .hero h1 {
-        font-size: 1.7rem;
-      }
-
-      .hero p,
-      .about,
-      .tagline,
-      .business-subtitle,
-      .features {
-        font-size: 0.98rem;
-      }
-
-      .desktop-downloads {
-        display: none;
-      }
-
-      .mobile-downloads {
-        display: block;
-      }
-
-      .store-badges {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .store-badges img {
-        width: 190px;
-        max-width: 75vw;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      .features {
-        padding-left: 18px;
-      }
-
-      .business-ad-form {
-        padding: 20px 14px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <div class="container">
+    <div class="top-section">
 
-    <section class="hero">
       <div class="logo-container">
-        <img src="logo.png" alt="Barchive Social Logo" />
+        <img src="logo.png" alt="Barchive Social Logo" width="150" />
       </div>
 
-      <h1>Barchive Social</h1>
-      <p>
-        Discover places, share your nights, rate your favorite spots, and see what’s happening around you.
-      </p>
-
-      <!-- Mobile only: app store badges -->
-      <div class="mobile-downloads">
-        <div class="store-badges">
-          <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank" rel="noopener noreferrer">
-            <img src="assets/download-app-store.png" alt="Download on the App Store" />
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1" target="_blank" rel="noopener noreferrer">
-            <img src="assets/google-play.png" alt="Get it on Google Play" />
-          </a>
-        </div>
+      <div class="mobile-store-links">
+        <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank" rel="noopener noreferrer">
+          <img src="assets/download-app-store.png" alt="Download on App Store" width="150" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets/google-play.png" alt="Get it on Google Play" width="150" />
+        </a>
       </div>
 
-      <!-- Desktop only: QR codes + badges -->
-      <div class="desktop-downloads">
-        <div class="qr-container">
-          <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank" rel="noopener noreferrer">
-            <img src="assets/ios-qr-code.png" alt="QR Code to App Store" />
-          </a>
-          <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank" rel="noopener noreferrer">
-            <img src="assets/download-app-store.png" alt="Download on the App Store" />
-          </a>
-        </div>
-
-        <div class="qr-container">
-          <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1" target="_blank" rel="noopener noreferrer">
-            <img src="assets/qr-code-android.png" alt="QR Code to Google Play" />
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1" target="_blank" rel="noopener noreferrer">
-            <img src="assets/google-play.png" alt="Get it on Google Play" />
-          </a>
-        </div>
+      <!-- iOS -->
+      <div class="qr-container ios-block">
+        <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank" rel="noopener noreferrer">
+          <img src="assets/ios-qr-code.png" alt="QR Code to App Store" width="150" />
+        </a>
+        <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank" rel="noopener noreferrer"
+          style="margin-top: 4px;">
+          <img src="assets/download-app-store.png" alt="Download on App Store" width="150" />
+        </a>
       </div>
-    </section>
+
+      <!-- Android (Google Play) -->
+      <div class="qr-container android-block">
+        <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets/qr-code-android.png" alt="QR Code to Google Play" width="150" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1" target="_blank"
+          rel="noopener noreferrer" style="margin-top: 4px;">
+          <img src="assets/google-play.png" alt="Get it on Google Play" width="150" />
+        </a>
+      </div>
+
+    </div>
 
     <div class="video-wrapper">
       <video controls playsinline poster="assets/barchive-video-ad-poster.jpg">
@@ -327,29 +59,27 @@
     </div>
 
     <h2>Discover. Share. Rate. Connect.</h2>
-
     <p class="about">
       Barchive Social is a location-based social platform that lets you explore and rate the places you visit — and
       share those moments with the world.
     </p>
-
     <ul class="features">
       <li>📸 Share image-based posts and stories tied to real-world locations</li>
       <li>⭐ Rate and review the places you visit</li>
       <li>📍 See posts and people near you — or explore anywhere on the map</li>
       <li>💬 Follow friends, make new connections, and send direct messages</li>
     </ul>
-
     <p class="tagline">
       Join a community where local experiences come to life — one post, one place at a time.
     </p>
 
     <section class="business-ad-form">
       <h3>Business Tutorials</h3>
-      <p class="business-subtitle">
-        Watch quick walkthroughs for creating and managing your business account.
-      </p>
-      <a href="business-tutorials.html" class="button-link">Watch Tutorials</a>
+      <p class="business-subtitle">Watch quick walkthroughs for creating and managing your business account.</p>
+      <a href="business-tutorials.html"
+        style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 4px;">
+        Watch Tutorials
+      </a>
     </section>
 
     <div class="image-wrapper">
@@ -359,7 +89,10 @@
     <section class="business-ad-form">
       <h3>Business Advertisement</h3>
       <p class="business-subtitle">Click here to learn more about advertising</p>
-      <a href="advertise.html" class="button-link">Learn More</a>
+      <a href="advertise.html"
+        style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 4px;">
+        Learn More
+      </a>
     </section>
 
     <footer>
@@ -367,7 +100,7 @@
       <a href="privacy.html">Privacy Policy</a> |
       <a href="safety.html">Child Safety Policy</a>
     </footer>
-
   </div>
 </body>
+
 </html>
