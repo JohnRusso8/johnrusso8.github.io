@@ -24,6 +24,7 @@ body {
 
 .container {
   width: 95%;
+  max-width: 950px;
   margin: 1rem auto;
   background: #fff;
   border-radius: 12px;
@@ -35,14 +36,14 @@ h1 {
   font-weight: 700;
   font-size: 1.9rem;
   color: #2c3e50;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
   text-align: center;
 }
 
 h2 {
   font-size: 1.25rem;
   color: #34495e;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0 0.75rem;
   text-align: center;
 }
 
@@ -54,6 +55,74 @@ h2 {
   text-align: center;
 }
 
+/* Top section */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 1rem 0 1.5rem;
+}
+
+.top-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-logo {
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+.store-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+.store-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.store-badge {
+  display: block;
+  height: 52px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.qr-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.qr-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
 /* Feature list */
 .features {
   margin: 1rem 0;
@@ -62,7 +131,8 @@ h2 {
 }
 
 .features li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
 }
 
 .features li::before {
@@ -78,130 +148,10 @@ h2 {
   text-align: center;
 }
 
-/* Logo */
-.app-logo {
-  display: block;
-  margin: 0 auto 1rem;
-  max-width: 160px;
-  height: auto;
-}
-
-/* Top section */
-.top-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  padding: 1rem 0;
-}
-
-.logo-container {
-  width: 100%;
-  max-width: 260px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.store-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.store-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
-.store-badge {
-  display: block;
-  height: 48px;
-  width: auto;
-  max-width: 135px;
-}
-
-.qr-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.qr-code {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-}
-
-/* Android placeholder */
-.android-placeholder {
-  width: 100%;
-  max-width: 180px;
-  height: 150px;
-  border: 2px dashed #888;
-  color: #555;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.android-title {
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.android-subtitle {
-  font-size: 0.85rem;
-}
-
-.video-wrapper {
-  width: 100%;
-  max-width: 100%;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.video-wrapper video {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.image-wrapper {
-  width: 100%;
-  margin: 1.25rem auto;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
 /* Forms */
 form {
   width: 100%;
-  max-width: 100%;
+  max-width: 500px;
   margin: 2rem auto 0;
   background: #fff;
   padding: 1.25rem;
@@ -234,7 +184,6 @@ textarea {
   min-height: 120px;
 }
 
-/* Buttons */
 button {
   display: block;
   width: 100%;
@@ -291,60 +240,47 @@ footer a {
 
 /* Mobile */
 @media (max-width: 767px) {
-  .top-section {
-    flex-direction: column;
-    gap: 0.75rem;
+  .container {
+    width: 95%;
+    padding: 1rem;
   }
 
-  .qr-container {
+  .top-section {
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 0.75rem;
+  }
+
+  .qr-section {
     display: none;
   }
 
-  .store-buttons {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  .store-row {
     gap: 10px;
   }
 
   .store-badge {
-    height: 42px;
-    max-width: 125px;
+    height: 44px;
+    max-width: 135px;
   }
 
   .app-logo {
     max-width: 150px;
     margin-bottom: 0.75rem;
   }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
 }
 
-/* Tablet and up */
+/* Tablet/Desktop */
 @media (min-width: 768px) {
-  .container {
-    max-width: 950px;
-  }
-
   .top-section {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .video-wrapper video {
-    max-width: 500px;
-  }
-
-  .image-wrapper img {
-    max-width: 500px;
-  }
-
-  form {
-    max-width: 500px;
-  }
-
-  .store-badge {
-    height: 50px;
-    max-width: 150px;
   }
 }
