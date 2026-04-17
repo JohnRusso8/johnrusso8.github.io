@@ -1,3 +1,4 @@
+/* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 *,
@@ -248,6 +249,7 @@ footer a {
   margin: 0 0.5rem;
 }
 
+
 /* tablet and up alt dimensions */
 @media (min-width: 768px) {
   .video-wrapper video {
@@ -268,4 +270,5 @@ footer a {
   form {
     max-width: 500px;
   }
+
 }
