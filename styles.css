@@ -256,59 +256,55 @@ footer a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    align-items: end;
+    align-items: start;
     column-gap: 12px;
-    row-gap: 10px;
+    row-gap: 8px;
   }
 
   .top-section .logo-container {
     grid-column: 1 / -1;
-    order: 1;
     margin-bottom: 2px;
   }
 
-  .top-section .qr-container:first-of-type {
-    order: 2;
-  }
-
-  .top-section .qr-container:last-of-type {
-    order: 3;
-  }
-
-  /* hide QR code images on mobile */
+  /* hide QR code images */
   .top-section .qr-container > a:first-child {
     display: none;
   }
 
   .top-section .qr-container {
-    width: 100%;
-    max-width: 170px;
-    min-height: 56px;
+    width: 150px;
+    max-width: 150px;
+    min-width: 150px;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
+    align-items: flex-start;
   }
 
+  /* badge slot */
   .top-section .qr-container > a:last-child {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-    min-height: 56px;
+    width: 150px;
+    height: 46px;
+    display: block;
+    overflow: hidden;
     margin-top: 0 !important;
-    line-height: 0;
+    position: relative;
   }
 
   .top-section .qr-container > a:last-child img {
     display: block;
-    width: 100%;
-    max-width: 150px;
+    width: 150px;
     height: auto;
+    max-width: none;
   }
 
-  /* fine-tune Google Play badge because its asset has extra space */
+  /* crop Apple badge normally */
+  .top-section .qr-container:first-of-type > a:last-child img {
+    margin-top: 0;
+  }
+
+  /* crop Google Play badge upward to remove extra bottom/top transparent space */
   .top-section .qr-container:last-of-type > a:last-child img {
-    transform: translateY(8px);
+    margin-top: -6px;
   }
 }
 
