@@ -122,11 +122,10 @@ h2 {
   display: block;
   width: auto;
   height: auto;
-  max-width: 150px;
 }
 
 .app-store-badge {
-  height: 50px;
+  height: 56px;
 }
 
 .google-play-badge {
@@ -298,7 +297,7 @@ footer a {
   }
 
   .app-store-badge {
-    height: 42px;
+    height: 47px;
   }
 
   .google-play-badge {
