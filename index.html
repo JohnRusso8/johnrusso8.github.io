@@ -1,84 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
   <title>Barchive Social</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <div class="container">
-<div class="top-section">
-  <div class="logo-container">
-    <img src="your-app-logo.png" alt="Barchive Social" class="app-logo">
+  <main class="container">
+    <h1>Barchive Social</h1>
+    <h2>Find your spot. Connect with people and places around you.</h2>
 
-    <div class="store-buttons">
-      <a href="YOUR_APPLE_LINK" class="store-link">
-        <img src="apple-badge.png" alt="Download on the App Store" class="store-badge">
-      </a>
-
-      <a href="YOUR_GOOGLE_PLAY_LINK" class="store-link">
-        <img src="google-play-badge.png" alt="Get it on Google Play" class="store-badge">
-      </a>
-    </div>
-  </div>
-
-  <div class="qr-container">
-    <img src="apple-qr.png" alt="App Store QR code" class="qr-code">
-    <img src="google-qr.png" alt="Google Play QR code" class="qr-code">
-  </div>
-</div>
-
-    <div class="video-wrapper">
-      <video controls playsinline poster="assets/barchive-video-ad-poster.jpg">
-        <source src="assets/barchive-ad.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <h2>Discover. Share. Rate. Connect.</h2>
     <p class="about">
-      Barchive Social is a location-based social platform that lets you explore and rate the places you visit — and
-      share those moments with the world.
+      Discover bars, trending spots, drinks people love, and what your friends
+      are up to nearby.
     </p>
-    <ul class="features">
-      <li>📸 Share image-based posts and stories tied to real-world locations</li>
-      <li>⭐ Rate and review the places you visit</li>
-      <li>📍 See posts and people near you — or explore anywhere on the map</li>
-      <li>💬 Follow friends, make new connections, and send direct messages</li>
-    </ul>
-    <p class="tagline">
-      Join a community where local experiences come to life — one post, one place at a time.
-    </p>
-<section class="business-ad-form">
-  <h3>Business Tutorials</h3>
-  <p class="business-subtitle">Watch quick walkthroughs for creating and managing your business account.</p>
-  <a href="business-tutorials.html"
-    style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 4px;">
-    Watch Tutorials
-  </a>
-</section>
-    <div class="image-wrapper">
-      <img src="assets/advertise.png" alt="Screenshot of banner ad">
-    </div>
 
-    <section class="business-ad-form">
-      <h3>Business Advertisement</h3>
-      <p class="business-subtitle">Click here to learn more about advertising</p>
-      <a href="advertise.html"
-        style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 4px;">
-        Learn More
-      </a>
+    <!--
+      CHANGE ONLY THESE IMAGE FILE NAMES IF YOUR FILES ARE NAMED DIFFERENTLY:
+      app-logo.png
+      apple-badge.png
+      google-play-badge.png
+      apple-qr.png
+      google-play-qr.png
+    -->
+    <section class="top-section">
+      <div class="top-main">
+        <img
+          src="app-logo.png"
+          alt="Barchive Social logo"
+          class="app-logo"
+        />
+
+        <div class="store-row">
+          <a
+            href="#"
+            class="store-link"
+            aria-label="Download on the App Store"
+          >
+            <img
+              src="apple-badge.png"
+              alt="Download on the App Store"
+              class="store-badge"
+            />
+          </a>
+
+          <a
+            href="#"
+            class="store-link"
+            aria-label="Get it on Google Play"
+          >
+            <img
+              src="google-play-badge.png"
+              alt="Get it on Google Play"
+              class="store-badge"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="qr-section">
+        <div class="qr-item">
+          <img
+            src="apple-qr.png"
+            alt="App Store QR code"
+            class="qr-code"
+          />
+        </div>
+
+        <div class="qr-item">
+          <img
+            src="google-play-qr.png"
+            alt="Google Play QR code"
+            class="qr-code"
+          />
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <a href="terms.html">Terms of Service</a> |
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="safety.html">Child Safety Policy</a>
-    </footer>
-  </div>
-</body>
+    <ul class="features">
+      <li>See what spots are trending near you</li>
+      <li>Discover bars, drinks, and nightlife hangouts</li>
+      <li>Find friends and explore where people are going out</li>
+      <li>Plan your night with bar crawls and shared posts</li>
+    </ul>
 
+    <p class="tagline">Where next?</p>
+
+    <section class="business-ad-form">
+      <h3>Business Inquiries</h3>
+      <p class="business-subtitle">
+        Interested in promotions, partnerships, or advertising?
+      </p>
+
+      <form>
+        <label for="name">
+          Name
+          <input type="text" id="name" name="name" placeholder="Your name" />
+        </label>
+
+        <label for="email">
+          Email
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+          />
+        </label>
+
+        <label for="message">
+          Message
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us more..."
+          ></textarea>
+        </label>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Barchive Social. All rights reserved.</p>
+  </footer>
+</body>
 </html>
