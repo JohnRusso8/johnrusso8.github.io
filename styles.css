@@ -253,39 +253,47 @@ footer a {
   display: none;
 }
 
-.mobile-store-links a {
-  display: inline-block;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .top-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(130px, 150px));
+    justify-content: center;
+    align-items: start;
+    gap: 12px 16px;
   }
 
-  .logo-container {
+  .top-section .logo-container {
+    grid-column: 1 / -1;
     order: 1;
-    margin-bottom: 6px;
+    margin: 0 auto 4px;
   }
 
-  .mobile-store-links {
+  .top-section .qr-container:first-of-type {
     order: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
   }
 
-  .qr-container {
+  .top-section .qr-container:last-of-type {
+    order: 3;
+  }
+
+  /* hide only the QR images on mobile */
+  .top-section .qr-container > a:first-child {
     display: none;
   }
 
-  .mobile-store-links img {
-    width: 160px;
-    max-width: 80vw;
+  /* keep only the store badges */
+  .top-section .qr-container {
+    width: auto;
+    max-width: none;
+  }
+
+  .top-section .qr-container > a:last-child {
+    margin-top: 0 !important;
+  }
+
+  .top-section .qr-container > a:last-child img {
+    width: 150px;
+    max-width: 42vw;
     height: auto;
     display: block;
   }
