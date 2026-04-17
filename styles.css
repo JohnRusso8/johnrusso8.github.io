@@ -256,46 +256,46 @@ footer a {
 @media (max-width: 767px) {
   .top-section {
     display: grid;
-    grid-template-columns: repeat(2, minmax(130px, 150px));
+    grid-template-columns: repeat(2, auto);
     justify-content: center;
     align-items: start;
-    gap: 12px 16px;
+    column-gap: 14px;
+    row-gap: 10px;
   }
 
   .top-section .logo-container {
     grid-column: 1 / -1;
-    order: 1;
-    margin: 0 auto 4px;
+    justify-self: center;
+    margin-bottom: 4px;
   }
 
-  .top-section .qr-container:first-of-type {
-    order: 2;
-  }
-
-  .top-section .qr-container:last-of-type {
-    order: 3;
-  }
-
-  /* hide only the QR images on mobile */
+  /* hide QR images on mobile */
   .top-section .qr-container > a:first-child {
     display: none;
   }
 
-  /* keep only the store badges */
   .top-section .qr-container {
     width: auto;
     max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .top-section .qr-container > a:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 0 !important;
+    line-height: 0;
   }
 
+  /* make both badges same visual height */
   .top-section .qr-container > a:last-child img {
-    width: 150px;
-    max-width: 42vw;
-    height: auto;
     display: block;
+    height: 48px;
+    width: auto;
+    max-width: 42vw;
   }
 }
 /* tablet and up alt dimensions */
