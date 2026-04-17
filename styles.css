@@ -55,7 +55,6 @@ h2 {
   text-align: center;
 }
 
-/* Feature list */
 .features {
   margin: 1rem 0;
   padding-left: 10px;
@@ -71,7 +70,6 @@ h2 {
   margin-right: 0.4rem;
 }
 
-/* Tagline */
 .tagline {
   margin-top: 1rem;
   font-style: italic;
@@ -79,24 +77,18 @@ h2 {
   text-align: center;
 }
 
-/* Logo */
-.app-logo {
-  display: block;
-  margin: 0 auto 1rem;
-  max-width: 160px;
-  height: auto;
-}
-
-/* Top section */
 .top-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
   padding: 1rem 0;
 }
 
-.android-placeholder,
+/* desktop header */
+.desktop-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
 .logo-container,
 .qr-container {
   width: 100%;
@@ -106,41 +98,47 @@ h2 {
   align-items: center;
 }
 
-/* make image links behave consistently */
-.qr-container a,
-.logo-container a {
+.logo-container img {
+  display: block;
+  height: auto;
+  max-width: 150px;
+}
+
+.qr-container a {
   display: block;
   line-height: 0;
 }
 
-.qr-container img,
-.logo-container img {
+.qr-container img {
   display: block;
+  width: 150px;
+  height: auto;
 }
 
-/* normalize the qr + badge blocks */
-.qr-container > a:first-child {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
+/* mobile header hidden by default */
+.mobile-header {
+  display: none;
 }
 
-.qr-container > a:first-child img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
+.mobile-store-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.qr-container > a:last-child {
-  width: 150px;
-  height: 48px;
-  overflow: hidden;
-  margin-top: 4px !important;
+.mobile-store-row a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }
 
-.qr-container > a:last-child img {
-  width: 150px;
-  height: 48px;
+.mobile-store-row img {
+  display: block;
+  width: 140px;
+  height: 42px;
   object-fit: contain;
 }
 
@@ -197,7 +195,6 @@ h2 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Forms */
 form {
   width: 100%;
   max-width: 100%;
@@ -233,7 +230,6 @@ textarea {
   min-height: 120px;
 }
 
-/* Buttons */
 button {
   display: block;
   width: 100%;
@@ -251,7 +247,6 @@ button:active {
   background-color: #4ac9b7;
 }
 
-/* Business form section */
 .business-ad-form {
   margin-top: 3rem;
   text-align: center;
@@ -272,7 +267,6 @@ button:active {
   font-style: italic;
 }
 
-/* Footer */
 footer {
   background: #f5f5f5;
   padding: 1rem;
@@ -288,57 +282,43 @@ footer a {
   margin: 0 0.5rem;
 }
 
-/* Mobile */
 @media (max-width: 767px) {
-  .top-section {
-    display: grid;
-    grid-template-columns: 150px 150px;
-    justify-content: center;
-    align-items: start;
-    column-gap: 12px;
-    row-gap: 10px;
-  }
-
-  .top-section .logo-container {
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin-bottom: 2px;
-  }
-
-  .top-section .qr-container {
-    width: 150px;
-    max-width: 150px;
-  }
-
-  /* hide QR codes on mobile */
-  .top-section .qr-container > a:first-child {
+  .desktop-header {
     display: none;
   }
 
-  .top-section .qr-container > a:last-child {
-    width: 150px;
-    height: 48px;
-    margin-top: 0 !important;
+  .mobile-header {
+    display: block;
+    text-align: center;
   }
 
-  .top-section .qr-container > a:last-child img {
+  .mobile-header .logo-container {
+    max-width: none;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .mobile-header .logo-container img {
     width: 150px;
-    height: 48px;
-    object-fit: contain;
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .mobile-store-row {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .mobile-store-row img {
+    width: 135px;
+    height: 40px;
   }
 }
 
-/* Tablet and up */
 @media (min-width: 768px) {
   .video-wrapper video {
     max-width: 500px;
-  }
-
-  .top-section {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
   }
 
   .container {
