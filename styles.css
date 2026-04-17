@@ -269,7 +269,7 @@ footer a {
     margin-bottom: 4px;
   }
 
-  /* hide QR images on mobile */
+  /* hide QR codes on mobile */
   .top-section .qr-container > a:first-child {
     display: none;
   }
@@ -286,15 +286,22 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 52px;
     margin-top: 0 !important;
     line-height: 0;
+    position: relative;
   }
 
-  /* make both badges same visual height */
-.top-section .qr-container > a:last-child img {
-  height: 48px;
-  width: auto;
-}
+  .top-section .qr-container > a:last-child img {
+    display: block;
+    height: 48px;
+    width: auto;
+  }
+
+  /* nudge Google Play badge down slightly */
+  .top-section .qr-container:last-child > a:last-child {
+    top: 4px;
+  }
 }
 /* tablet and up alt dimensions */
 @media (min-width: 768px) {
