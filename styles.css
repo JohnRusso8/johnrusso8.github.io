@@ -308,7 +308,7 @@ footer a {
 
   /* fine-tune Google Play badge because its asset has extra space */
   .top-section .qr-container:last-of-type > a:last-child img {
-    transform: translateY(2px);
+    transform: translateY(8px);
   }
 }
 
