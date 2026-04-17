@@ -7,8 +7,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -55,6 +54,7 @@ h2 {
   text-align: center;
 }
 
+/* Feature list */
 .features {
   margin: 1rem 0;
   padding-left: 10px;
@@ -70,6 +70,7 @@ h2 {
   margin-right: 0.4rem;
 }
 
+/* Tagline */
 .tagline {
   margin-top: 1rem;
   font-style: italic;
@@ -77,11 +78,12 @@ h2 {
   text-align: center;
 }
 
+/* Top section */
 .top-section {
   padding: 1rem 0;
 }
 
-/* desktop header */
+/* Desktop header */
 .desktop-header {
   display: flex;
   justify-content: center;
@@ -100,8 +102,9 @@ h2 {
 
 .logo-container img {
   display: block;
-  height: auto;
+  width: 150px;
   max-width: 150px;
+  height: auto;
 }
 
 .qr-container a {
@@ -109,13 +112,25 @@ h2 {
   line-height: 0;
 }
 
-.qr-container img {
+.qr-container > a:first-child img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.desktop-store-link {
+  display: block;
+  margin-top: 4px;
+}
+
+.desktop-store-link img {
   display: block;
   width: 150px;
   height: auto;
 }
 
-/* mobile header hidden by default */
+/* Mobile header hidden by default */
 .mobile-header {
   display: none;
 }
@@ -123,23 +138,30 @@ h2 {
 .mobile-store-row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 8px;
   margin-top: 10px;
 }
 
-.mobile-store-row a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mobile-badge {
+  width: 140px;
+  height: 42px;
+  overflow: hidden;
+  display: block;
+  position: relative;
   line-height: 0;
 }
 
-.mobile-store-row img {
+.mobile-badge img {
   display: block;
   width: 140px;
-  height: 42px;
-  object-fit: contain;
+  height: auto;
+}
+
+/* This trims the Google Play asset a bit so it visually lines up */
+.play-badge img {
+  position: relative;
+  top: -6px;
 }
 
 /* Android placeholder */
@@ -195,6 +217,7 @@ h2 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Forms */
 form {
   width: 100%;
   max-width: 100%;
@@ -230,6 +253,7 @@ textarea {
   min-height: 120px;
 }
 
+/* Buttons */
 button {
   display: block;
   width: 100%;
@@ -247,6 +271,7 @@ button:active {
   background-color: #4ac9b7;
 }
 
+/* Business form section */
 .business-ad-form {
   margin-top: 3rem;
   text-align: center;
@@ -267,6 +292,7 @@ button:active {
   font-style: italic;
 }
 
+/* Footer */
 footer {
   background: #f5f5f5;
   padding: 1rem;
@@ -282,6 +308,7 @@ footer a {
   margin: 0 0.5rem;
 }
 
+/* Mobile */
 @media (max-width: 767px) {
   .desktop-header {
     display: none;
@@ -292,13 +319,12 @@ footer a {
     text-align: center;
   }
 
-  .mobile-header .logo-container {
-    max-width: none;
+  .mobile-logo {
     width: auto;
-    margin: 0 auto;
+    max-width: none;
   }
 
-  .mobile-header .logo-container img {
+  .mobile-logo img {
     width: 150px;
     max-width: 150px;
     height: auto;
@@ -310,12 +336,21 @@ footer a {
     flex-wrap: nowrap;
   }
 
-  .mobile-store-row img {
+  .mobile-badge {
     width: 135px;
     height: 40px;
   }
+
+  .mobile-badge img {
+    width: 135px;
+  }
+
+  .play-badge img {
+    top: -6px;
+  }
 }
 
+/* Tablet and up */
 @media (min-width: 768px) {
   .video-wrapper video {
     max-width: 500px;
