@@ -291,12 +291,10 @@ footer a {
   }
 
   /* make both badges same visual height */
-  .top-section .qr-container > a:last-child img {
-    display: block;
-    height: 48px;
-    width: auto;
-    max-width: 42vw;
-  }
+.top-section .qr-container > a:last-child img {
+  height: 48px;
+  width: auto;
+}
 }
 /* tablet and up alt dimensions */
 @media (min-width: 768px) {
