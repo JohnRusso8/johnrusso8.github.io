@@ -93,6 +93,8 @@ h2 {
   align-items: center;
   justify-content: center;
   min-width: 180px;
+  width: 100%;
+  text-align: center;
 }
 
 .app-logo {
@@ -104,24 +106,30 @@ h2 {
 }
 
 .store-buttons {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .store-buttons a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 170px;   /* same width for both buttons */
+  text-decoration: none;
 }
 
 .store-badge {
   display: block;
+  max-width: 100%;
   width: auto;
   height: auto;
+  margin: 0 auto;
 }
 
 .app-store-badge {
@@ -145,8 +153,8 @@ h2 {
   width: 150px;
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
-
 .video-wrapper {
   width: 100%;
   max-width: 100%;
@@ -277,6 +285,8 @@ footer a {
     flex-direction: column;
     gap: 1rem;
     padding: 0.5rem 0 1rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .qr-side {
@@ -285,15 +295,25 @@ footer a {
 
   .logo-container {
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .app-logo {
     width: 150px;
-    margin-bottom: 0.75rem;
+    margin: 0 auto 0.75rem;
   }
 
   .store-buttons {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+  }
+
+  .store-buttons a {
+    width: auto;
   }
 
   .app-store-badge {
