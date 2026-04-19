@@ -81,7 +81,7 @@ h2 {
 /* Top section */
 .top-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 40px;
   padding: 1rem 0;
@@ -93,7 +93,6 @@ h2 {
   align-items: center;
   justify-content: center;
   min-width: 180px;
-  width: 100%;
   text-align: center;
 }
 
@@ -102,26 +101,24 @@ h2 {
   width: 150px;
   max-width: 100%;
   height: auto;
-  margin: 0 auto 1rem;
+  margin: 0 auto;
 }
 
 .store-buttons {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0.75rem auto 0;
 }
 
 .store-buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
-  /* same width for both buttons */
   text-decoration: none;
 }
 
@@ -134,22 +131,40 @@ h2 {
 }
 
 .app-store-badge {
-  height: 76px;
+  height: 47px;
 }
 
 .google-play-badge {
-  height: 50px;
+  height: 42px;
 }
 
 .qr-side {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 150px;
+  justify-content: flex-start;
+  width: 170px;
+  text-align: center;
 }
 
 .qr-code {
+  display: block;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.desktop-store-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  text-decoration: none;
+  width: 150px;
+}
+
+.desktop-store-badge {
   display: block;
   width: 150px;
   max-width: 100%;
@@ -308,6 +323,7 @@ footer a {
   }
 
   .store-buttons {
+    display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -316,14 +332,6 @@ footer a {
 
   .store-buttons a {
     width: auto;
-  }
-
-  .app-store-badge {
-    height: 47px;
-  }
-
-  .google-play-badge {
-    height: 42px;
   }
 }
 
@@ -336,7 +344,7 @@ footer a {
   .top-section {
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
   }
 
