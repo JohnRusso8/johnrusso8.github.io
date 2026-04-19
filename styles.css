@@ -24,6 +24,7 @@ body {
 
 .container {
   width: 95%;
+  max-width: 950px;
   margin: 1rem auto;
   background: #fff;
   border-radius: 12px;
@@ -80,11 +81,59 @@ h2 {
 
 /* Top section */
 .top-section {
+  display: grid;
+  grid-template-columns: 190px 1fr 190px;
+  align-items: start;
+  justify-items: center;
+  column-gap: 40px;
+  padding: 1rem 0 0.5rem;
+}
+
+.qr-side {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  text-align: center;
+}
+
+.qr-link {
+  display: block;
+  line-height: 0;
+}
+
+.qr-code {
+  display: block;
+  width: 135px;
+  height: 135px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.desktop-store-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 1rem 0;
+  width: 190px;
+  min-height: 56px;
+  text-decoration: none;
+}
+
+.desktop-store-badge {
+  display: block;
+  max-width: 300%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.desktop-app-store-badge {
+  width: 330px;
+}
+
+.desktop-google-play-badge {
+  width: 170px;
 }
 
 .logo-container {
@@ -92,69 +141,42 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 180px;
-  width: 100%;
   text-align: center;
+  min-width: 0;
 }
 
 .app-logo {
   display: block;
-  width: 150px;
+  width: 140px;
   max-width: 100%;
   height: auto;
-  margin: 0 auto 1rem;
-}
-
-.store-buttons {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
   margin: 0 auto;
 }
 
-.store-buttons a {
+.mobile-store-buttons {
+  display: none;
+}
+
+.mobile-store-buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
-  /* same width for both buttons */
   text-decoration: none;
 }
 
-.store-badge {
+.mobile-store-badge {
   display: block;
-  max-width: 100%;
   width: auto;
   height: auto;
   margin: 0 auto;
 }
 
-.app-store-badge {
-  height: 76px;
+.mobile-app-store-badge {
+  height: 47px;
 }
 
-.google-play-badge {
-  height: 50px;
-}
-
-.qr-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-}
-
-.qr-code {
-  display: block;
-  width: 150px;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
+.mobile-google-play-badge {
+  height: 42px;
 }
 
 .video-wrapper {
@@ -169,7 +191,7 @@ h2 {
 .video-wrapper video {
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 500px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
@@ -185,7 +207,7 @@ h2 {
 .image-wrapper img {
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 500px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
@@ -193,7 +215,7 @@ h2 {
 /* Forms */
 form {
   width: 100%;
-  max-width: 100%;
+  max-width: 500px;
   margin: 2rem auto 0;
   background: #fff;
   padding: 1.25rem;
@@ -226,7 +248,7 @@ textarea {
   min-height: 120px;
 }
 
-/* Buttons – thumb friendly */
+/* Buttons */
 button {
   display: block;
   width: 100%;
@@ -284,11 +306,12 @@ footer a {
 /* Mobile */
 @media (max-width: 767px) {
   .top-section {
+    display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 0.5rem 0 1rem;
     align-items: center;
     justify-content: center;
+    gap: 16px;
+    padding: 0.5rem 0 1rem;
   }
 
   .qr-side {
@@ -297,9 +320,6 @@ footer a {
 
   .logo-container {
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
   }
 
   .app-logo {
@@ -307,48 +327,12 @@ footer a {
     margin: 0 auto 0.75rem;
   }
 
-  .store-buttons {
+  .mobile-store-buttons {
     width: 100%;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-  }
-
-  .store-buttons a {
-    width: auto;
-  }
-
-  .app-store-badge {
-    height: 47px;
-  }
-
-  .google-play-badge {
-    height: 42px;
-  }
-}
-
-/* tablet and up alt dimensions */
-@media (min-width: 768px) {
-  .video-wrapper video {
-    max-width: 500px;
-  }
-
-  .top-section {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .container {
-    max-width: 950px;
-  }
-
-  .image-wrapper img {
-    max-width: 500px;
-  }
-
-  form {
-    max-width: 500px;
+    flex-wrap: wrap;
   }
 }
