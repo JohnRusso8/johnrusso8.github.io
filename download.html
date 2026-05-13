@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Download Barchive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download Barchive Social</title>
 
   <script>
     const appStoreUrl = "https://apps.apple.com/us/app/barchive-social/id6742911751";
@@ -20,49 +21,159 @@
   </script>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #173b73 0%, #07111f 55%, #02040a 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 18px;
       text-align: center;
-      padding: 60px 20px;
-      background: #ffffff;
-      color: #111;
+    }
+
+    .download-container {
+      width: 100%;
+      max-width: 620px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 28px;
+      padding: 36px 24px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .app-logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 22px;
+      border-radius: 28px;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
+      font-size: 34px;
+      margin: 0 0 10px;
+      letter-spacing: 0.3px;
     }
 
-    p {
-      font-size: 16px;
-      margin-bottom: 24px;
+    .subtitle {
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 0 auto 28px;
+      max-width: 460px;
+      color: rgba(255, 255, 255, 0.82);
     }
 
-    a {
+    .store-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .store-buttons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.16s ease, opacity 0.16s ease;
+    }
+
+    .store-buttons a:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .store-badge {
+      width: 220px;
+      height: auto;
       display: block;
-      margin: 14px auto;
-      padding: 14px 20px;
-      max-width: 280px;
-      background: #111;
+    }
+
+    .google-play-badge {
+      width: 238px;
+    }
+
+    .small-note {
+      margin-top: 26px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 18px;
       color: white;
       text-decoration: none;
-      border-radius: 12px;
-      font-size: 17px;
-      font-weight: bold;
+      font-size: 15px;
+      opacity: 0.8;
+    }
+
+    .home-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .download-container {
+        padding: 32px 18px;
+        border-radius: 24px;
+      }
+
+      .app-logo {
+        width: 130px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .store-badge {
+        width: 205px;
+      }
+
+      .google-play-badge {
+        width: 222px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>Download Barchive</h1>
-  <p>If you are not redirected automatically, choose your store:</p>
+  <main class="download-container">
+    <img src="logo.png" alt="Barchive Social Logo" class="app-logo" />
 
-  <a href="https://apps.apple.com/us/app/barchive-social/id6742911751">
-    Download on the App Store
-  </a>
+    <h1>Download Barchive</h1>
 
-  <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1">
-    Get it on Google Play
-  </a>
+    <p class="subtitle">
+      Discover bars, rate drinks, share your nights out, and see where the action is happening around you.
+    </p>
+
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/us/app/barchive-social/id6742911751" target="_blank" rel="noopener noreferrer">
+        <img src="assets/download-app-store.png" alt="Download on the App Store" class="store-badge" />
+      </a>
+
+      <a href="https://play.google.com/store/apps/details?id=com.russo.barFriends&hl=en_US&pli=1" target="_blank" rel="noopener noreferrer">
+        <img src="assets/google-play.png" alt="Get it on Google Play" class="store-badge google-play-badge" />
+      </a>
+    </div>
+
+    <p class="small-note">
+      If you are not redirected automatically, choose your store above.
+    </p>
+
+    <a href="index.html" class="home-link">Back to Barchive Social</a>
+  </main>
 </body>
 </html>
