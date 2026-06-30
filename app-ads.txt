@@ -1,4 +1,10 @@
 google.com, pub-8480909904723524, DIRECT, f08c47fec0942fa0
+videoheroes.tv, 212428, RESELLER, 064bc410192443d8
+zetaglobal.net, 630, RESELLER
+bidmachine.io, 1371, RESELLER
+blueseasx.com, 203625, RESELLER
+risecodes.com, 68d54e2fe125150001dd91e2, RESELLER
+thunder-monetize.com, 4818959194, RESELLER
 inmobi.com, 23d316d3d980453d8ea0dcf9caec4078, RESELLER, 83e75a7ae333ca9d
 jcprog.com, pub-4518750432, RESELLER
 lunamedia.io, 2fdb16a1-5025-4c41-9b17-e01e47ebc8b4, RESELLER, 524ecb396915caaf
@@ -160,9 +166,3 @@ video.unrulymedia.com, 905340553, RESELLER
 video.unrulymedia.com, 144138083, RESELLER
 video.unrulymedia.com, 703273072, RESELLER
 video.unrulymedia.com, 290726769, RESELLER
-videoheroes.tv, 212428, RESELLER, 064bc410192443d8
-zetaglobal.net, 630, RESELLER
-bidmachine.io, 1371, RESELLER
-blueseasx.com, 203625, RESELLER
-risecodes.com, 68d54e2fe125150001dd91e2, RESELLER
-thunder-monetize.com, 4818959194, RESELLER
