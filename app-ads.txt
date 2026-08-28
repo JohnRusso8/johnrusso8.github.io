@@ -166,3 +166,4 @@ video.unrulymedia.com, 905340553, RESELLER
 video.unrulymedia.com, 144138083, RESELLER
 video.unrulymedia.com, 703273072, RESELLER
 video.unrulymedia.com, 290726769, RESELLER
+facebook.com, 693336346860708, DIRECT, c3e20eee3f780d68
